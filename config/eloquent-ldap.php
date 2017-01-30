@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'enabled' => env('eloquent-ldap.enabled', false),
+    'enabled' => env('eloquent-ldap.enabled', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -23,7 +23,7 @@ return [
     |
     */
 
-    'debug' => env('eloquent-ldap.debug', 'false'),
+    'debug' => env('eloquent-ldap.debug', 'true'),
 
     /*
     |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ return [
     |
     */
 
-    'server_type' => env('eloquent-ldap.server_type', 'MSAD'),
+    'server_type' => env('eloquent-ldap.server_type', 'LDAP'),
 
     /*
     |--------------------------------------------------------------------------
@@ -48,7 +48,7 @@ return [
     |
     */
 
-    'create_accounts' => env('eloquent-ldap.create_accounts', true),
+    'create_accounts' => env('eloquent-ldap.create_accounts', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'replicate_group_membership' => env('eloquent-ldap.replicate_group_membership', true),
+    'replicate_group_membership' => env('eloquent-ldap.replicate_group_membership', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -79,7 +79,7 @@ return [
     |
     */
 
-    'resync_on_login' => env('eloquent-ldap.resync_on_login', true),
+    'resync_on_login' => env('eloquent-ldap.resync_on_login', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -133,7 +133,7 @@ return [
     |
     */
 
-    'account_suffix' => env('eloquent-ldap.account_suffix', "@company.com"),
+    'account_suffix' => env('eloquent-ldap.account_suffix', "@psuape.lan"),
 
     /*
     |--------------------------------------------------------------------------
@@ -144,7 +144,7 @@ return [
     |
     */
 
-    'base_dn' => env('eloquent-ldap.base_dn', "DC=department,DC=company,DC=com"),
+    'base_dn' => env('eloquent-ldap.base_dn', "DC=psuape,DC=lan"),
 
     /*
     |--------------------------------------------------------------------------
@@ -156,7 +156,7 @@ return [
     |
     */
 
-    'server' => [ env('eloquent-ldap.server', "ldapsrv01.company.com") ],
+    'server' => [ env('eloquent-ldap.server', "benzil.psuape.lan") ],
 
     /*
     |--------------------------------------------------------------------------
@@ -178,7 +178,7 @@ return [
     |
     */
 
-    'user_name' => env('eloquent-ldap.user_name', "ldap_reader"),
+    'user_name' => env('eloquent-ldap.user_name', "integrador_ad"),
 
     /*
     |--------------------------------------------------------------------------
@@ -189,7 +189,7 @@ return [
     |
     */
 
-    'password' => env('eloquent-ldap.password', "PaSsWoRd"),
+    'password' => env('eloquent-ldap.password', "PqS#int#2016"),
 
     /*
     |--------------------------------------------------------------------------
@@ -264,7 +264,7 @@ return [
     |
     */
 
-    'username_field' => env('eloquent-ldap.username_field', "samaccountname"),
+    'username_field' => env('eloquent-ldap.username_field', "uid"),
 
     /*
     |--------------------------------------------------------------------------
@@ -275,7 +275,7 @@ return [
     |
     */
 
-    'email_field' => env('eloquent-ldap.email_field', "userprincipalname"),
+    'email_field' => env('eloquent-ldap.email_field', "mail"),
 
     /*
     |--------------------------------------------------------------------------
@@ -286,7 +286,7 @@ return [
     |
     */
 
-    'first_name_field' => env('eloquent-ldap.first_name_field', "givenname"),
+    'first_name_field' => env('eloquent-ldap.first_name_field', "cn"),
 
     /*
     |--------------------------------------------------------------------------
