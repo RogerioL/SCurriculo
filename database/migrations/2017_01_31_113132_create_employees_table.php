@@ -34,8 +34,10 @@ class CreateEmployeesTable extends Migration
             $table->unique('id');
             $table->softDeletes();
             $table->timestamps();
-    
         });
+        
+        Schema::enableForeignKeyConstraints();
+        
     }
     
     /**
@@ -45,6 +47,7 @@ class CreateEmployeesTable extends Migration
     */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::drop('employees');
     }
 }

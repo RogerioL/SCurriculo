@@ -6,10 +6,10 @@ use Illuminate\Database\Migrations\Migration;
 class CreateDegreesTable extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    * Run the migrations.
+    *
+    * @return void
+    */
     public function up()
     {
         Schema::create('degrees', function (Blueprint $table) {
@@ -26,15 +26,18 @@ class CreateDegreesTable extends Migration
             $table->softDeletes();
             $table->timestamps();
         });
+        
+        Schema::enableForeignKeyConstraints();
     }
-
+    
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    * Reverse the migrations.
+    *
+    * @return void
+    */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::drop('degrees');
     }
 }

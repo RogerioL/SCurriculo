@@ -6,10 +6,10 @@ use Illuminate\Database\Migrations\Migration;
 class CreateExperiencesTable extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    * Run the migrations.
+    *
+    * @return void
+    */
     public function up()
     {
         Schema::create('experiences', function (Blueprint $table) {
@@ -25,15 +25,18 @@ class CreateExperiencesTable extends Migration
             $table->softDeletes();
             $table->timestamps();
         });
+        
+        Schema::enableForeignKeyConstraints();
     }
-
+    
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    * Reverse the migrations.
+    *
+    * @return void
+    */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::drop('experiences');
     }
 }
