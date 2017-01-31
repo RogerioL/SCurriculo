@@ -264,7 +264,7 @@ return [
     |
     */
 
-    'username_field' => env('eloquent-ldap.username_field', "uid"),
+    'username_field' => env('eloquent-ldap.username_field', "sAMAccountName"),
 
     /*
     |--------------------------------------------------------------------------
@@ -286,7 +286,7 @@ return [
     |
     */
 
-    'first_name_field' => env('eloquent-ldap.first_name_field', "cn"),
+    'first_name_field' => env('eloquent-ldap.first_name_field', "givenName"),
 
     /*
     |--------------------------------------------------------------------------

@@ -88,7 +88,7 @@ return array(
         'logs'            => true, // Add the latest log messages
         'files'           => false, // Show the included files
         'config'          => false, // Display config settings
-        'auth'            => false, // Display Laravel authentication status
+        'auth'            => true, // Display Laravel authentication status
         'session'         => true,  // Display session data
     ),
 

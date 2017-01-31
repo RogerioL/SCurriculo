@@ -88,6 +88,7 @@ class AuthController extends Controller
         ]);
 
         $credentials = $request->only('username', 'password');
+        var_dump(Auth::attempt($credentials, $request->has('remember')));
 
         if (Auth::attempt($credentials, $request->has('remember'))) {
 
